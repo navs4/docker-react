@@ -1,0 +1,13 @@
+sudo: required
+
+services: 
+- docker
+
+before_install:
+ - docker build -t navs4/docker-react  -f Dockerfile.dev
+
+
+script:
+  - docker run -e CI=true navs4/docker-react        
+
+
