@@ -8,6 +8,6 @@ before_install:
 
 
 script:
-  - docker run -e CI=true navs4/docker-react        
+  - docker run -e CI=true navs4/docker-react  npm run test
 
 
