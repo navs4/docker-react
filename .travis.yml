@@ -11,3 +11,20 @@ script:
   - docker run -e CI=true navs4/docker-react  npm run test
 
 
+deploy:
+ provider: elasticbeanstalk
+ region: us-east-1
+ app: Frontend
+ app-env: Frontend-env
+ bucket-name:  elasticbeanstalk-us-east-1-557306256516
+ bucket-path: Frontend
+ on:
+  branch: main
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key: $AWS_SECRET_KEY
+
+
+ 
+ 
+
+
